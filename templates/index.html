@@ -1,0 +1,32 @@
+{% extends "blank.html" %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-body">
+        <table class="table table-borderless">
+            <thead>
+                <th>ชื่อ</th>
+                <th>นามสกุล</th>
+                <th>เพศ</th>
+                <th>อายุ</th>
+                <th>การศึกษา</th>
+                <th>แผนก</th>
+            </thead>
+            <tbody>
+                {% for item in employees %}
+                <tr>
+                    <td>{{item.fname}}</td>
+                    <td>{{item.lname}}</td>
+                    <td>{{item.gender}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.education}}</td>
+                    <td>{{item.department}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock content %}
